@@ -1,0 +1,67 @@
+div{
+	color: purple;
+	font-family: Courier;
+}
+.navigation-bar {
+	text-align: right;
+	font-size: 25px;
+	padding-bottom: 10px;
+	border-bottom: #0000FF solid 4px ;
+	background-color: darkblue;
+	margin: -5px;
+	margin-bottom: 5px;
+}
+.links{
+	display: flex;
+	flex-flow: row-reverse;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.register{
+	text-decoration: underline;
+}
+.login_link{
+	text-decoration: underline;
+}
+.forum_link{
+	text-decoration: underline;
+}
+body{
+	background-color: #00001F;
+} 
+.btn {
+	text-align: right;
+}
+.btn form input {
+	background-color: #0f3f9f;
+	font-size: 20px;
+	border-radius: 7px;
+	border-style: double;
+	border-color: red;
+	color: darkkhaki;
+	font-family: Courier;
+}
+a {
+	color: red;
+	text-decoration:  none;
+	font-family: Comic-Sans; 
+}
+li.thread a{
+	color: green;
+	text-decoration: underline;
+}
+li.thread{
+	padding-top: 10px;
+	color: green;
+	padding-bottom: 10px;
+	border-bottom: 2px;
+	border-top: 0px;
+    border-left: 0px;
+	border-right: 0px;
+	border-style: solid;
+	margin-bottom: 5px;
+	border-image: linear-gradient(to right,red, purple) 1 100;
+}
+ul {
+	padding-inline-start: 10px;
+}

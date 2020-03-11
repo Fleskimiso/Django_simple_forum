@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+	<meta charset="utf-8">
+	<title>{{post.title }}</title>
+	<!--<link rel="stylesheet" type="text/css" href="">-->
+	<<link rel="stylesheet" type="text/css" href="{% static 'blog/post.css' %}">
+</head>
+
+	<div class="post">
+
+		<div class="info">
+			<div class="title">
+			Title: {{post.title}}
+		</div>
+		<div class="author">
+			Author: {{post.author}}
+		</div>
+		</div>
+		<div class="content">
+			{{post.content}}
+		</div>
+	</div>
+
+{% endblock %}

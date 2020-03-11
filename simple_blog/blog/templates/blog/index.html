@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div>
+	"This is suppossed to be index  of the forum... "
+	<div>
+		<br>    
+	</div>
+
+	<div>Threads:  </div>
+
+	<ul>
+	{% for thread in threads %}
+	<li class="thread">
+		<a href="{% url 'blog:thread' thread.title %}">{{ thread.title }}</a>
+
+		<div> Total number of posts:  {{thread.total_posts}} </div>
+	</li>
+
+	{% endfor %}
+	</ul>
+</div>
+{% endblock	 %}

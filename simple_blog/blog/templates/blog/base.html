@@ -1,0 +1,33 @@
+{% load static %}
+{% block "base" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<title>The django forum</title> -->
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/base_style.css' %}">
+</head>
+<body>
+	<div class="navigation-bar">
+		<div class="btn">
+			<form action="{% url 'blog:logout' %}">
+				{% csrf_token %}
+				<input type="submit" name="logout" value="logout">
+			</form>
+		</div>
+		<div class="links">
+			{% if request.user.is_authenticated == False %}
+			<div>
+				<a class="register" href="{% url 'blog:register'%}"> Register </a>
+			or <a class="login_link" href="{% url 'blog:login' %}">Login </a>
+			</div>
+		{% endif %}
+		<a class="forum_link" href="{% url 'blog:forum' %}">The django forum</a>
+		</div>
+	</div>
+
+	{% block content%}
+	{% endblock  %}
+</body>
+</html>
+{% endblock "base" %}

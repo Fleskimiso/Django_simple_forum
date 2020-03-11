@@ -1,0 +1,31 @@
+.post{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.info{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+	border: 1px solid green;
+	width: 50%;
+}
+.title{
+	width: 100%;
+	border-right: 1px solid green;
+}
+.author{
+  width: 100%;
+	text-align:  right;
+	
+}
+.content{
+  width: 100%;
+	text-align:  center;
+	border-image: linear-gradient(to right,red, purple) 1 100;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding-top: 10px;
+}

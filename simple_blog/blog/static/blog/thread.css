@@ -1,0 +1,46 @@
+a {
+	color: red;
+	text-decoration:  underline;
+	font-family: Comic-Sans; 
+}
+.title {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+}
+.post .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.post{
+	border-top: 3px;
+	border-bottom: 3px;
+	border-left: 0px;
+	border-right: 0px;
+	border-style: solid;
+	margin-bottom: 10px;
+	margin-left: -6px;
+	margin-right: -6px;
+	border-image: linear-gradient(to right, darkred, rgba(0,0,0,0)) 1 100;
+
+	   display:  flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+ #thread{
+	border-bottom: 2px;
+	border-style: solid;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-bottom: 20px;
+    
+    border-image: linear-gradient(to right, red, blue) 1 100;
+    text-align: right;
+}

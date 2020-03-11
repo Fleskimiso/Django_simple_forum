@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+	<title>Register page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/login.css' %}">
+</head>
+
+
+	<div>
+		Welcome to the registration page. 
+	</div>
+
+<div class="login form">
+	{% if warning %}
+		<div class="warning">
+			{{warning }}
+		</div>
+	{% endif %}
+
+	<form action="{% url 'blog:register' %}" method="POST">
+		{% csrf_token %}
+
+		<div class="field">
+			<label class="email label">Email:</label>
+			<input type="text" name="email">
+		</div>
+		<div class="field">
+			<label class="username label">Username:</label>
+		<input type="text" name="username"> 
+		</div>
+			
+			<div class="field">
+				<label class="password label">Password:</label>
+			<input type="password" name="password">
+			</div>
+			<div id="button_field" class="field ">
+				<input  class="button" type="submit" name="submit" value="submit">
+			</div>
+
+	</form>
+
+
+</div>
+<div style="color: red; size: 20px;"> hello world</div>
+{% endblock %}

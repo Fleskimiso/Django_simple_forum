@@ -1,0 +1,33 @@
+div .field{
+	color: blue;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: dashed;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-color: #00006F;
+}
+div #button_field{
+	border-bottom: #00006F dashed;
+}
+
+.login {
+	background-color: #00111F;
+	width: 50%;
+	margin-top: 200px;
+	margin-left: 25%;
+}
+
+.button {
+	border-radius: 7px;
+	width: 80px;
+	height: 40px;
+	color: #0000FF;
+	font-family: Courier;
+	background-color: #00da0a;
+	border-color: #00da0a;
+	font-weight: bold;
+	text-transform: uppercase;
+}
