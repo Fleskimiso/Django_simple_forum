@@ -29,3 +29,56 @@
 	border-bottom: 1px solid;
 	padding-top: 10px;
 }
+#delete{
+	width: 100%;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px blue solid;
+}
+#delete input{
+	color: red;
+	background-color: turquoise;
+	border-image: border-image: linear-gradient(to right,red, purple) 1 100;
+	border: 2px solid;
+	border-radius: 8px;
+}
+#comments_container{
+	align-items: center;
+	text-align: left;
+	word-wrap: break-word;
+	width: 100%;
+}
+.comment{
+	border-top: 1px solid green;
+}
+.comment_author{
+	padding-bottom: 20px;
+}
+.comment_text{
+	padding-bottom: 5px;
+}
+#com {
+	width: 75%;
+	height: 80px;
+    background: border-box;
+    color: green;
+}
+#create_comment{
+	padding-top: 20px;
+	align-items: center;
+	align-text: center;
+	width: 100%;
+}
+#create_comment input[type='submit']{
+	color: green;
+	width: 100px;
+	text-align: center;
+	transform: translateY(-30px) translateX(20%);
+	border-radius: 8px;
+	background: turquoise;
+	border: 3px solid green;
+}
+
+
+

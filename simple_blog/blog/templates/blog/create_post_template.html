@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/create_post.css' %}">
+	</head>
+
+	<div class="post_form">
+		<form method="POST" action="{% url 'blog:create_post' title %}">
+			{% csrf_token %}
+		<div id="title">
+			<label for="title">
+			Title:	<input type="text" name="title_post" value="" placeholder="title">
+			</label>
+		</div>
+		<div id="content">
+			<textarea name="content" rows="5" cols="40" maxlength="2500" placeholder="write here..."></textarea>
+		</div>
+		<input type="submit" name="" value="submit">
+		</form>
+			
+	</div>
+{% endblock %}

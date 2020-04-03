@@ -37,5 +37,11 @@
 				</div>
 			</div>
 		{% endfor %}
+
+		{% if request.user.is_authenticated %}
+			<button type="submit">
+				<a href="{% url 'blog:create_post' title %}" > Create new post. </a>
+			</button>
+		{% endif %}
 	</div>
 {% endblock %}

@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>{{post.title }}</title>
 	<!--<link rel="stylesheet" type="text/css" href="">-->
-	<<link rel="stylesheet" type="text/css" href="{% static 'blog/post.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/post.css' %}">
 </head>
 
 	<div class="post">
@@ -22,6 +22,46 @@
 		<div class="content">
 			{{post.content}}
 		</div>
+		{% if request.user.is_authenticated == True and post.author.credentials == request.user %}
+		<div id="delete">
+			<form method="POST" action="{% url 'blog:post_delete' post.id %}">
+				{% csrf_token %}
+				<input type="hidden" name="post_id" value="{{ post.id }}">
+				<input type="submit" name="" value="delete post">
+			</form>
+		</div>
+		 {% endif %}
+
+		 <div id="comments_container">
+		 	<div>
+		 		Comments: 
+		 	</div>
+		 	{% for comment in comments %}
+		 	<div class="comment">
+		 		<div class="comment_author">
+		 			Author: {{ comment.author.credentials.username }}
+		 		</div>
+		 		<div class="comment_text">
+		 			{{comment.comment_text}}
+		 		</div>
+		 	</div>
+		 {% endfor %}
+		 </div>
+
+		 {% if request.user.is_authenticated == True %}
+		 	<div id="create_comment">
+		 		<form method="POST"  action="{%  url 'blog:create_comment'  %}" >
+		 			{% csrf_token %}
+		 			<input type="hidden" name="post_id" value="{{ post.id }}" >
+		 			<label for="commment_content">
+		 				<textarea id="com" wrap="soft" rows="20" cols="125" maxlength="2500" name="content" value="" placeholder="">
+		 				</textarea>
+		 			</label>
+		 			<input type="submit" value="comment" >
+		 		</form>
+		 	</div>
+		 {% endif %}
+
 	</div>
 
 {% endblock %}
